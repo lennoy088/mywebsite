@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me & Computer Science</title>
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="C:\Users\25-1293\Desktop\websitetlmm\style.css">
+</head>
+<body>
+ <ul style = " list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;">
+<li style = "float: left;display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;"><a href="index.html">Home</a></li>
+<li style = "float: left;display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;"><a href="About.html">About us</a></li>
+<li style = "float: left;display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;"><a href="Contact.html">Contact us</a></li>
+<li style = "float: left;display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;"><a href="Blog.html">Blog</a></li>
+</ul>
+
+
+    <!-- Heading -->
+     <h1>Our Blog</h1>
+
+        <!-- Blog Post 1 -->
+        <div class="post">
+            <h2>Getting Started with C Programming</h2>
+            <time datetime="2025-08-01">August 1, 2025</time>
+            <p>C programming is a great foundation for learning how software works at a low level. This article explains how to install a C compiler and write your first "Hello, World!" program.</p>
+
+            <!-- Comment Box -->
+            <div class="comment-box">
+                <textarea placeholder="Leave a comment..." id="comment1"></textarea>
+                <button onclick="postComment('comment1', 'comments1')">Post</button>
+                <div class="comments" id="comments1"></div>
+            </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="post">
+            <h2>Why C is Still Relevant Today</h2>
+            <time datetime="2025-07-24">July 24, 2025</time>
+            <p>Despite being over 50 years old, C is still widely used in embedded systems, operating systems, and performance-critical applications. Let’s explore why developers still love it.</p>
+
+            <!-- Comment Box -->
+            <div class="comment-box">
+                <textarea placeholder="Leave a comment..." id="comment2"></textarea>
+                <button onclick="postComment('comment2', 'comments2')">Post</button>
+                <div class="comments" id="comments2"></div>
+            </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="post">
+            <h2>Tech Trends: AI Meets C</h2>
+            <time datetime="2025-07-18">July 18, 2025</time>
+            <p>As AI continues to grow, developers are looking back at C to build optimized AI models for low-power devices. This post explores how C is used with AI at the hardware level.</p>
+
+            <!-- Comment Box -->
+            <div class="comment-box">
+                <textarea placeholder="Leave a comment..." id="comment3"></textarea>
+                <button onclick="postComment('comment3', 'comments3')">Post</button>
+                <div class="comments" id="comments3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle comment posting -->
+    <script>
+        function postComment(textAreaId, containerId) {
+            const commentText = document.getElementById(textAreaId).value.trim();
+            if (commentText !== "") {
+                const commentSection = document.getElementById(containerId);
+                const newComment = document.createElement("div");
+                newComment.className = "comment";
+                newComment.textContent = commentText;
+                commentSection.appendChild(newComment);
+                document.getElementById(textAreaId).value = ""; // Clear textarea
+            }
+        }
+    </script>
+
+</body>
+</html>
